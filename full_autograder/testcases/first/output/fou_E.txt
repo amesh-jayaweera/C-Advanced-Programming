@@ -1,0 +1,4 @@
+memread:7417
+memwrite:611377
+cachehit:5810077
+cachemiss:7417

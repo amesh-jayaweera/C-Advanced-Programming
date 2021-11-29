@@ -1,0 +1,46 @@
+
+Setps to followed solve the program
+
+    1. Take the command line inputs
+    2. Calculate tag bits, index bits and offset bits , set count
+
+        - Calculate offset bits
+            offset bits = log2(block size)
+
+        - Calculate set counts
+            If associativity is not assoc:
+                set count = cache size / block size
+            Else:
+                set count = cache size / (block size * n)
+                n - is the number set associative ways
+            
+        - Calculate index bits
+            index bits = log2(set count)
+
+        - Calculate tag bits
+            If associativity is not assoc:
+                Then tag bits = 48 - index bits - offset bits
+            Else:
+                tag bits = 48 - offset bits
+    
+    3. Init cache memory with set counts
+        IF associativity is direct then each cache struct contains only one tag space
+        Else If associativity is assoc:n then each cache struct contains n tags space
+        Else if associativity is assoc then each struct contains only one tag space
+        
+    4. Calculate Memory Reads, Memory Writes, Cache Hits and Cache Misses
+
+        Read trace file line by line:
+
+            take mode and hex value as string from the line
+
+            convert hex value string to long integer value
+            convert long integer value to binary string which is in 48-bit format
+
+            take tag and set value by splliting the line
+
+            check tag in the cache and if it exists then it is a cache hit
+            otherwise it is a cache miss
+            if it is miss then do replacement accoring to FIFO
+
+            repeat until whole file read
