@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "globals.h": "c",
+        "concepts": "c",
+        "array": "c",
+        "iterator": "c",
+        "string": "c",
+        "string_view": "c",
+        "vector": "c",
+        "random": "c",
+        "block_list.h": "c",
+        "regions.h": "c"
+    }
+}
