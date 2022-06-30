@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "new": "cpp",
+        "__locale": "cpp",
+        "locale": "cpp",
+        "chrono": "cpp"
+    }
+}
